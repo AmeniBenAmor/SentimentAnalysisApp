@@ -1,27 +1,13 @@
-# Data Science Web Application Tutorial
-
-## Clone/Fork repository
-
-First fork or clone this repo:
-
-e.g. `git clone https://github.com/gtancev/kidnAI.git`
- 
 
 ## Build images and run containers with docker-compose
 
 After cloning the repository go inside the project folder:
 
-`cd kidnAI`
-
 Run `docker-compose up` which will start a Flask web application for the backend API (default port `8081`) and an Angular frontend served through a webpack development web server (default port `4200`).
-
 
 ## Access your app
 
-In your browser navigate to: `http://localhost:4200` (or whatever port you defined for the frontend in `docker-compose.yml`).
-
-For testing your backend API I recommend using [Postman](https://www.getpostman.com/).
-  
+In your browser navigate to: `http://localhost:4200` (or whatever port you defined for the frontend in `docker-compose.yml`).  
 
 ## Working __without__ docker 
 
@@ -40,7 +26,7 @@ Run `python app.py` in backend root (will watch files and restart server on port
 
 Navigate inside the frontend directory: `cd frontend`
 
-Assure you have [Nodejs](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/en/docs/install) and the [angular-cli](https://cli.angular.io/) installed.
+Assure you have [Nodejs], [Yarn]and the [angular-cli] installed.
 
 Install npm dependencies: `yarn install --pure-lockfile` 
 
