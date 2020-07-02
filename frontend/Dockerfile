@@ -1,6 +1,6 @@
 FROM node:latest
 # set up angular cli
-RUN yarn global add @angular/cli@10.0.0
+RUN yarn global add @angular/cli@9.0.5
 
 WORKDIR /app
 COPY package.json /app
