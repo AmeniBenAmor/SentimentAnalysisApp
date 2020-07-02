@@ -1,55 +1,40 @@
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
-import { RouterModule } from "@angular/router";
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { HttpClientModule } from "@angular/common/http";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app.routing';
 
-import { BsDropdownModule } from "ngx-bootstrap/dropdown";
-import { ProgressbarModule } from "ngx-bootstrap/progressbar";
-import { TooltipModule } from "ngx-bootstrap/tooltip";
-import { CollapseModule } from "ngx-bootstrap/collapse";
-import { TabsModule } from "ngx-bootstrap/tabs";
-import { PaginationModule } from "ngx-bootstrap/pagination";
-import { AlertModule } from "ngx-bootstrap/alert";
-import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
-import { CarouselModule } from "ngx-bootstrap/carousel";
-import { ModalModule } from "ngx-bootstrap/modal";
+import { AppComponent } from './app.component';
+import { SignupComponent } from './signup/signup.component';
+import { LandingComponent } from './landing/landing.component';
+import { ProfileComponent } from './profile/profile.component';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
-import { PagesModule } from "./pages/pages.module";
+import { HomeModule } from './home/home.module';
+import { LoginComponent } from './login/login.component';
 
-import { IndexComponent } from "./pages/index/index.component";
-import { ProfilepageComponent } from "./pages/examples/profilepage/profilepage.component";
-import { RegisterpageComponent } from "./pages/examples/registerpage/registerpage.component";
-import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.component";
 @NgModule({
   declarations: [
-    AppComponent
-    // IndexComponent,
-    // ProfilepageComponent,
-    // RegisterpageComponent,
-    // LandingpageComponent
+    AppComponent,
+    SignupComponent,
+    LandingComponent,
+    ProfileComponent,
+    NavbarComponent,
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserAnimationsModule,
+    BrowserModule,
+    NgbModule,
     FormsModule,
-    HttpClientModule,
     RouterModule,
     AppRoutingModule,
-    // BsDropdownModule.forRoot(),
-    // ProgressbarModule.forRoot(),
-    // TooltipModule.forRoot(),
-    // CollapseModule.forRoot(),
-    // TabsModule.forRoot(),
-    PagesModule
-    // PaginationModule.forRoot(),
-    // AlertModule.forRoot(),
-    // BsDatepickerModule.forRoot(),
-    // CarouselModule.forRoot(),
-    // ModalModule.forRoot()
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
