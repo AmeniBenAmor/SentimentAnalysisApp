@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS, cross_origin
+from flask_restful import Resource, Api
 import joblib
 
 # declare constants
@@ -7,11 +9,13 @@ PORT = 8081 #os.environ.get('PORT')
 
 # initialize flask application
 app = Flask(__name__)
+api = Api(app)
 
+CORS(app)
 # read model
 #clf = joblib.load('model.pkl').set_params(n_jobs=1)
 
-@app.route('/')
+@app.route('/api/predict')
 def predict():
     
     # get object from request
