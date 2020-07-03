@@ -1,22 +1,5 @@
 <footer class="footer" [ngClass]="{'has-cards': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login'}">
-  <div class="container container-lg" *ngIf="getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login'">
-    <div class="row">
-      <div class="col-md-6 mb-5 mb-md-0">
-        <div class="card card-lift--hover shadow border-0">
-          <a [routerLink]="['/landing']" title="Landing Page">
-            <img src="./assets/img/theme/landing.jpg" class="card-img">
-          </a>
-        </div>
-      </div>
-      <div class="col-md-6 mb-5 mb-lg-0">
-        <div class="card card-lift--hover shadow border-0">
-          <a [routerLink]="['/user-profile']" title="Profile Page">
-            <img src="./assets/img/theme/profile.jpg" class="card-img">
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
   <div class="container">
     <div class="row row-grid align-items-center" [ngClass]="{'my-md': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login', 'mb-5':getPath()==='/user-profile' || getPath()==='/register' || getPath()==='/login'}">
       <div class="col-lg-6">
@@ -43,7 +26,7 @@
       <div class="col-md-6">
         <div class="copyright">
           &copy; {{test | date: 'yyyy'}}
-          <a href="https://www.creative-tim.com?ref=adsa-footer" target="_blank">Creative Tim</a>.
+          <a  target="_blank">Ameni Ben Amor</a>.
         </div>
       </div>
       <div class="col-md-6">

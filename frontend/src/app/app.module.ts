@@ -13,8 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
-
+import { UploaderModule  } from '@syncfusion/ej2-angular-inputs';
+import { DragDropDirective } from './drag-drop.directive';
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProfileComponent,
     NavbarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    DragDropDirective
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeModule,
     MatInputModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    UploaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
